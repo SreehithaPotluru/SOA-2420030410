@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Phishing Detection & Response Agent</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div class="logo">🛡️</div>
+      <p class="eyebrow">CYBERSECURITY • URL INTELLIGENCE</p>
+      <h1>AI Phishing Detection<br><span>& Response Agent</span></h1>
+      <p class="sub">Analyze a URL, understand its risk, and get a recommended response.</p>
+    </header>
+
+    <section class="panel">
+      <label for="urlInput">Website URL</label>
+      <div class="input-row">
+        <input id="urlInput" type="text" placeholder="https://example.com" autocomplete="url">
+        <button id="analyzeBtn">Analyze URL</button>
+      </div>
+      <p class="hint">Tip: paste a link you want to inspect. Do not visit suspicious links.</p>
+      <p id="status" role="status"></p>
+    </section>
+
+    <section id="results" class="results hidden" aria-live="polite">
+      <div class="result-head">
+        <div><p class="eyebrow">ANALYSIS RESULT</p><h2 id="prediction">—</h2></div>
+        <div id="riskBadge" class="badge">—</div>
+      </div>
+      <div class="score-row"><span>Risk score</span><strong id="score">0/100</strong></div>
+      <div class="meter"><div id="meterFill"></div></div>
+      <h3>Why was it flagged?</h3>
+      <ul id="reasons"></ul>
+      <div class="response-box">
+        <p class="eyebrow">RESPONSE AGENT</p>
+        <h3 id="action">—</h3>
+        <p id="responseMessage"></p>
+        <small id="simulated"></small>
+      </div>
+      <p id="note" class="hint"></p>
+    </section>
+    <footer>Educational prototype • Results are indicators, not a guarantee of safety.</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
